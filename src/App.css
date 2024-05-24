@@ -1,0 +1,37 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgray;
+}
+.container {
+  background-color: white;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+input {
+  height: 50px;
+  width: 50px;
+}
+
+.block {
+  width: 50px;
+  height: 50px;
+  border: black solid 2px;
+}
+
+.p-one{
+  background-color: green;
+}
+.p-two{
+  background-color: red;
+}

@@ -3,7 +3,7 @@ import "./App.css";
 import Block from "./Block";
 
 function App() {
-  const [blocks, setBlocks] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  const [blocks, setBlocks] = useState<Array<number>>();
   const [playerOnePlaces, setPlayerOne] = useState(Array<number>);
   const [playerTwoPlaces, setPlayerTwo] = useState(Array<number>);
   const [turn, setTurn] = useState("p-one" || "p-two");
@@ -37,6 +37,9 @@ function App() {
       }, 500);
     }
   }, [playerOnePlaces, playerTwoPlaces]);
+  useEffect(() => {
+    setBlocks([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  }, []);
 
   const handleClick = (event: any) => {
     const classes = event.currentTarget.className;
@@ -59,7 +62,7 @@ function App() {
       <div className="main">
         <div className="container">
           <div className="grid">
-            {blocks.map((block, index) => (
+            {blocks?.map((_, index) => (
               <Block dataId={index + 1} onClick={handleClick} key={index} />
             ))}
           </div>

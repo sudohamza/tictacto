@@ -2,7 +2,7 @@
   "name": "tic-tac-to",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://sudohamza.github.io/tictacto",
+  "homepage": "https://sudohamza.github.io/tictacto/",
   "type": "module",
   "scripts": {
     "dev": "vite",
